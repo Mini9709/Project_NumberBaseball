@@ -5,7 +5,7 @@ import java.util.*;
 public class BaseballGame {
     private Set<Integer> baseballNumber = new LinkedHashSet<>();
     private int difficulty, playCount, strikeCount, ballCount;
-    private static final String NUMBER_REG = "^[0-9]*$";
+    private static final String NUMBER_REG = "^[1-9]*$";
 
     Scanner sc = new Scanner(System.in);
 
@@ -27,7 +27,7 @@ public class BaseballGame {
             // 6. 볼 개수 계산
             // 7. 힌트 출력
 
-            System.out.print("0~9 의 숫자 "+difficulty+"개를 입력하세요 : ");
+            System.out.print("1~9 의 숫자 "+difficulty+"개를 입력하세요 : ");
             String input = sc.nextLine();
             System.out.println(baseballNumber+ " (테스트용 정답 출력)"); // 테스트용 정답 출력
 
@@ -59,11 +59,20 @@ public class BaseballGame {
 
     protected boolean validateInput(String input) throws BadInputException {
         if (!input.matches(NUMBER_REG)) {
-            throw new BadInputException("잘못된 입력입니다. 숫자를 입력해 주세요!!");
+            throw new BadInputException("잘못된 입력입니다. 1~9 의 숫자를 입력해주세요.");
         } else if (input.length() != difficulty){
-            throw new BadInputException(difficulty + "자리 숫자를 입력해 주세요!!");
+            throw new BadInputException(difficulty + "자리 숫자를 입력해주세요.");
         } else {
-            return true;
+            Set<Character> checkDuplicatedNumber = new HashSet<>();
+            for (int i = 0; i < input.length(); i++){
+                checkDuplicatedNumber.add(input.charAt(i));
+            }
+            System.out.println(checkDuplicatedNumber);
+            if (checkDuplicatedNumber.size() != difficulty){
+                throw new BadInputException("중복되지 않은 숫자를 입력해주세요.");
+            } else{
+                return true;
+            }
         }
     }
 
