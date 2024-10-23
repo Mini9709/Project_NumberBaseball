@@ -42,7 +42,7 @@ public class BaseballGame {
             ballCount = countBall(input);
 
             // 5. 정답여부 확인 및 힌트 출력
-            if (strikeCount == 3){
+            if (strikeCount == difficulty){
                 System.out.println("정답입니다!!");
                 break;
             }

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12faeab6-60aa-467d-87f9-985260a3fe0d" name="변경" comment="GameRecord 클래스 구현 및 기타 클래스 수정&#10;BaseballGame : 주석 추가 및 validateInput 메서드 수정&#10;Main : 반복문 추가&#10;BaseballGameDisplay : 종료여부 boolean값 추가 및 메뉴 선택 로직 추가">
+    <list default="true" id="12faeab6-60aa-467d-87f9-985260a3fe0d" name="변경" comment="클래스 수정 및 주석 추가&#10;BaseballGame : countBall 로직 수정&#10;BaseballGameDisplay : 닉네임 설정 추가, 신규 유저 점수 기록 및 순위 조정 기능 추가&#10;GameRecord : 순위 출력에 필요한 변수 추가, 순위 조정 메서드 추가, clearRecord 메서드 기능 추가(순위 초기화), 순위 출력 로직 추가">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BaseballGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BaseballGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BaseballGameDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BaseballGameDisplay.java" afterDir="false" />
@@ -97,7 +97,7 @@
       <updated>1729490554030</updated>
       <workItem from="1729490555051" duration="9721000" />
       <workItem from="1729556863460" duration="26107000" />
-      <workItem from="1729644389442" duration="10304000" />
+      <workItem from="1729644389442" duration="13659000" />
     </task>
     <task id="LOCAL-00001" summary="숫자야구 기본 로직 구현(게임 실행)">
       <option name="closed" value="true" />
@@ -123,7 +123,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729661722252</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="클래스 수정 및 주석 추가&#10;BaseballGame : countBall 로직 수정&#10;BaseballGameDisplay : 닉네임 설정 추가, 신규 유저 점수 기록 및 순위 조정 기능 추가&#10;GameRecord : 순위 출력에 필요한 변수 추가, 순위 조정 메서드 추가, clearRecord 메서드 기능 추가(순위 초기화), 순위 출력 로직 추가">
+      <option name="closed" value="true" />
+      <created>1729669084618</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1729669084618</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +143,7 @@
     <MESSAGE value="GameRecord 클래스 구현 및 기타 &#10;입력 받을 수 있는 값에서 0을 제외함.&#10;입력값에서 중복된 숫자 입력 시 오류 메시지 출력" />
     <MESSAGE value="BaseballGame 클래스 수정 :&#10;입력 받을 수 있는 값에서 0을 제외함.&#10;입력값에서 중복된 숫자 입력 시 오류 메시지 출력" />
     <MESSAGE value="GameRecord 클래스 구현 및 기타 클래스 수정&#10;BaseballGame : 주석 추가 및 validateInput 메서드 수정&#10;Main : 반복문 추가&#10;BaseballGameDisplay : 종료여부 boolean값 추가 및 메뉴 선택 로직 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="GameRecord 클래스 구현 및 기타 클래스 수정&#10;BaseballGame : 주석 추가 및 validateInput 메서드 수정&#10;Main : 반복문 추가&#10;BaseballGameDisplay : 종료여부 boolean값 추가 및 메뉴 선택 로직 추가" />
+    <MESSAGE value="클래스 수정 및 주석 추가&#10;BaseballGame : countBall 로직 수정&#10;BaseballGameDisplay : 닉네임 설정 추가, 신규 유저 점수 기록 및 순위 조정 기능 추가&#10;GameRecord : 순위 출력에 필요한 변수 추가, 순위 조정 메서드 추가, clearRecord 메서드 기능 추가(순위 초기화), 순위 출력 로직 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="클래스 수정 및 주석 추가&#10;BaseballGame : countBall 로직 수정&#10;BaseballGameDisplay : 닉네임 설정 추가, 신규 유저 점수 기록 및 순위 조정 기능 추가&#10;GameRecord : 순위 출력에 필요한 변수 추가, 순위 조정 메서드 추가, clearRecord 메서드 기능 추가(순위 초기화), 순위 출력 로직 추가" />
   </component>
 </project>

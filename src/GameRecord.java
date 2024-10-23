@@ -31,7 +31,7 @@ public class GameRecord {
         }
 
         while(!exitMenu) {
-            System.out.println("메뉴를 선택하세요\n 1. 순위 보기\n 2. 기록 삭제\n 3. 뒤로");
+            System.out.println("메뉴를 선택하세요.\n 1. 순위 보기\n 2. 기록 삭제\n 3. 뒤로");
             String choice;
 
             choice = sc.next();
@@ -40,7 +40,7 @@ public class GameRecord {
                 // 1 : 순위 출력
                 case "1" -> {
                     if (recordList.isEmpty()){
-                        System.out.println("정보가 없습니다");
+                        System.out.println("정보가 없습니다.");
                     } else {
                         if (firstPlayer.isEmpty() ){
                             System.out.println("1등 : 없음");
@@ -64,7 +64,7 @@ public class GameRecord {
                 // 3 : 기록 삭제
                 case "3" -> exitMenu = true;
                 // 그 외의 문자열 입력 시 오류 메시지 출력
-                default -> System.out.println("잘못된 입력입니다");
+                default -> System.out.println("잘못된 입력입니다.");
             }
         }
     }
