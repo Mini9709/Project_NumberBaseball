@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12faeab6-60aa-467d-87f9-985260a3fe0d" name="변경" comment="숫자야구 기본 로직 구현(게임 실행)">
+    <list default="true" id="12faeab6-60aa-467d-87f9-985260a3fe0d" name="변경" comment="BaseballGame 클래스 수정 : &#10;입력 받을 수 있는 값에서 0을 제외함.&#10;입력값에서 중복된 숫자 입력 시 오류 메시지 출력">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BaseballGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BaseballGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exceptionClass/BadInputException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exceptionClass/BadInputException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BaseballGameDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BaseballGameDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +96,8 @@
       <option name="presentableId" value="Default" />
       <updated>1729490554030</updated>
       <workItem from="1729490555051" duration="9721000" />
-      <workItem from="1729556863460" duration="13640000" />
+      <workItem from="1729556863460" duration="26107000" />
+      <workItem from="1729644389442" duration="3266000" />
     </task>
     <task id="LOCAL-00001" summary="숫자야구 기본 로직 구현(게임 실행)">
       <option name="closed" value="true" />
@@ -104,7 +107,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729577243374</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="BaseballGame 클래스 수정 : &#10;입력 받을 수 있는 값에서 0을 제외함.&#10;입력값에서 중복된 숫자 입력 시 오류 메시지 출력">
+      <option name="closed" value="true" />
+      <created>1729580813079</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729580813079</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,6 +123,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="숫자야구 기본 로직 구현(게임 실행)" />
-    <option name="LAST_COMMIT_MESSAGE" value="숫자야구 기본 로직 구현(게임 실행)" />
+    <MESSAGE value="BaseballGame 클래스 수정 : &#10;입력 받을 수 있는 값에서 0을 제외함.&#10;입력값에서 중복된 숫자 입력 시 오류 메시지 출력" />
+    <option name="LAST_COMMIT_MESSAGE" value="BaseballGame 클래스 수정 : &#10;입력 받을 수 있는 값에서 0을 제외함.&#10;입력값에서 중복된 숫자 입력 시 오류 메시지 출력" />
   </component>
 </project>

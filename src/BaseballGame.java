@@ -9,6 +9,7 @@ public class BaseballGame {
 
     Scanner sc = new Scanner(System.in);
 
+    //난이도에 따라 랜덤숫자 생성
     public BaseballGame(int difficulty) {
         this.difficulty = difficulty;
         while (baseballNumber.size() < difficulty) {
@@ -32,7 +33,7 @@ public class BaseballGame {
             System.out.println(baseballNumber+ " (테스트용 정답 출력)"); // 테스트용 정답 출력
 
             try {
-                boolean validInput = validateInput(input); // 수정 예정
+                validateInput(input);
             } catch (BadInputException e) {
                 System.out.println(e.getMessage());
             }
@@ -57,7 +58,8 @@ public class BaseballGame {
         return playCount;
     }
 
-    protected boolean validateInput(String input) throws BadInputException {
+    // 유효값 여부 확인 메서드 : 예외처리로 수정함
+    protected void validateInput(String input) throws BadInputException {
         if (!input.matches(NUMBER_REG)) {
             throw new BadInputException("잘못된 입력입니다. 1~9 의 숫자를 입력해주세요.");
         } else if (input.length() != difficulty){
@@ -70,8 +72,6 @@ public class BaseballGame {
             System.out.println(checkDuplicatedNumber);
             if (checkDuplicatedNumber.size() != difficulty){
                 throw new BadInputException("중복되지 않은 숫자를 입력해주세요.");
-            } else{
-                return true;
             }
         }
     }
