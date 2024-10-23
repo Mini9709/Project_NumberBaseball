@@ -1,8 +1,15 @@
 import java.util.*;
 
 public class GameRecord {
-    private static Map<String, Integer> recordList = new HashMap<>();
+    private static Map<String, Integer> recordList = new LinkedHashMap<>();
     private boolean exitMenu = false;
+    private static int firstScore = 99999;
+    private static int secondScore = 99999;
+    private static int thirdScore = 99999;
+    private static String firstPlayer = "";
+    private static String secondPlayer = "";
+    private static String thirdPlayer = "";
+
     Scanner sc = new Scanner(System.in);
 
     public static void setRecord(int score, String nickname){
@@ -30,24 +37,64 @@ public class GameRecord {
             choice = sc.next();
 
             switch (choice) {
+                // 1 : 순위 출력
                 case "1" -> {
                     if (recordList.isEmpty()){
                         System.out.println("정보가 없습니다");
                     } else {
-                        for (int i = 1; i < 4; i++) { System.out.println("Test"); } //순위 출력
-                        // int, String 변수 3개 생성(1등,2등,3등)
-                        // map value를 돌며 비교 후 저장
-                        // 반복문이 종료 되면, 3등 까지 출력
+                        if (firstPlayer.isEmpty() ){
+                            System.out.println("1등 : 없음");
+                        } else {
+                            System.out.println("1등 : " + firstPlayer + " - " + firstScore);
+                        }
+                        if (secondPlayer.isEmpty() ){
+                            System.out.println("2등 : 없음");
+                        } else {
+                            System.out.println("2등 : " + secondPlayer + " - " + secondScore);
+                        }
+                        if (thirdPlayer.isEmpty() ){
+                            System.out.println("3등 : 없음");
+                        } else {
+                            System.out.println("3등 : " + thirdPlayer + " 의 점수 - " + thirdScore);
+                        }
                     }
                 }
+                // 2 : 기록 삭제
                 case "2" -> clearRecord();
+                // 3 : 기록 삭제
                 case "3" -> exitMenu = true;
+                // 그 외의 문자열 입력 시 오류 메시지 출력
                 default -> System.out.println("잘못된 입력입니다");
             }
         }
     }
 
+    // 신규 유저의 기록을 받아 순위 조정
+    public static void recordRank(int score, String nickname){
+        if (score < thirdScore) {
+            if (score < secondScore) {
+                thirdScore = secondScore;
+                thirdPlayer = secondPlayer;
+                if (score < firstScore) {
+                    secondScore = firstScore;
+                    secondPlayer = firstPlayer;
+                    firstScore = score;
+                    firstPlayer = nickname;
+                } else {
+                    secondScore = score;
+                    secondPlayer = nickname;
+                }
+            } else {
+                thirdScore = score;
+                thirdPlayer = nickname;
+            }
+        }
+    }
+
+    // 플레이 기록 및 순위 초기화
     public void clearRecord(){
         recordList.clear();
+        firstScore = secondScore = thirdScore = 99999;
+        firstPlayer = secondPlayer = thirdPlayer = "";
     }
 }

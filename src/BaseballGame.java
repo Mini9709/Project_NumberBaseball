@@ -13,35 +13,35 @@ public class BaseballGame {
     public BaseballGame(int difficulty) {
         this.difficulty = difficulty;
         while (baseballNumber.size() < difficulty) {
-            int randomNumber = new Random().nextInt(10);
+            int randomNumber = new Random().nextInt(1,10);
             baseballNumber.add(randomNumber);
         }
     }
 
     public int play() {
         while (true) {
-            // 1. 유저에게 입력값을 받음
-            // 2. 올바른 입력값을 받았는지 검증
-            // 3. 게임 진행횟수 증가
-            // 4. 스트라이크 개수 계산
-            // 5. 정답여부 확인, 만약 정답이면 break 를 이용해 반복문 탈출
-            // 6. 볼 개수 계산
-            // 7. 힌트 출력
 
+            // 유저에게 입력값을 받음
             System.out.print("1~9 의 숫자 "+difficulty+"개를 입력하세요 : ");
             String input = sc.nextLine();
             System.out.println(baseballNumber+ " (테스트용 정답 출력)"); // 테스트용 정답 출력
 
+            // 올바른 입력값을 받았는지 검증
             try {
                 validateInput(input);
             } catch (BadInputException e) {
                 System.out.println(e.getMessage());
+                continue;
             }
 
+            // 게임 진행횟수 증가
             playCount++;
 
+            // 스트라이크 및 볼 개수 계산
             strikeCount = countStrike(input);
             ballCount = countBall(input);
+
+            // 5. 정답여부 확인 및 힌트 출력
             if (strikeCount == 3){
                 System.out.println("정답입니다!!");
                 break;
@@ -54,6 +54,7 @@ public class BaseballGame {
                 }
             }
         }
+
         // 게임 진행횟수 반환
         return playCount;
     }
@@ -69,7 +70,6 @@ public class BaseballGame {
             for (int i = 0; i < input.length(); i++){
                 checkDuplicatedNumber.add(input.charAt(i));
             }
-            System.out.println(checkDuplicatedNumber);
             if (checkDuplicatedNumber.size() != difficulty){
                 throw new BadInputException("중복되지 않은 숫자를 입력해주세요.");
             }
@@ -93,7 +93,7 @@ public class BaseballGame {
         int count = 0;
         Iterator<Integer> iterator = baseballNumber.iterator();
         for (int i = 0; i < input.length(); i++) {
-            if (baseballNumber.contains(Integer.parseInt(input.substring(i, i + 1))) && Integer.parseInt(input.substring(i, i + 1)) != iterator.next()) {
+            if (Integer.parseInt(input.substring(i, i + 1)) != iterator.next() && baseballNumber.contains(Integer.parseInt(input.substring(i, i + 1)))) {
                 count++;
             }
         }

@@ -4,11 +4,13 @@ import java.util.Scanner;
 
 public class BaseballGameDisplay {
     private int choice, tryCount;
+    private String nickname;
     private boolean exit = false;
 
     public boolean getExit() {
         return exit;
     }
+
     public void start() throws Exception{
         Scanner sc = new Scanner(System.in);
 
@@ -28,21 +30,23 @@ public class BaseballGameDisplay {
 
             while (true){       // 닉네임 설정 후 기록
                 System.out.print("닉네임을 입력하세요 : ");
-                String nickname = sc.next();
+                nickname = sc.next();
                 if (GameRecord.getRecordList().containsKey(nickname)){
-                    System.out.print("중복된 닉네임입니다.");
+                    System.out.print("중복된 닉네임입니다. 다른 ");
                 } else {
                     GameRecord.setRecord(tryCount, nickname);
                     break;
                 }
             }
 
+            GameRecord.recordRank(tryCount, nickname); // 순위 조정
+
         } else if (choice == 2){    // 두번째 메뉴 : 게임 기록
             GameRecord gameRecord = new GameRecord();
             gameRecord.printRecord();
         }
 
-        else{
+        else{   // 세번째 메뉴 : 종료
             System.out.println("게임을 종료합니다");
             exit = true;
         }
