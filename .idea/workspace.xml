@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12faeab6-60aa-467d-87f9-985260a3fe0d" name="변경" comment="클래스 수정 및 주석 추가&#10;BaseballGame : countBall 로직 수정&#10;BaseballGameDisplay : 닉네임 설정 추가, 신규 유저 점수 기록 및 순위 조정 기능 추가&#10;GameRecord : 순위 출력에 필요한 변수 추가, 순위 조정 메서드 추가, clearRecord 메서드 기능 추가(순위 초기화), 순위 출력 로직 추가">
+    <list default="true" id="12faeab6-60aa-467d-87f9-985260a3fe0d" name="변경" comment="난이도 설정 추가&#10;BaseballGame : 정답여부 구문 변경 (3 -&gt; difficulty)&#10;BaseballGameDisplay : 0번째 메뉴(난이도 설정) 추가 및 switch문 변경">
+      <change afterPath="$PROJECT_DIR$/src/README.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BaseballGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BaseballGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BaseballGameDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BaseballGameDisplay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,22 +51,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Mini/IdeaProjects/FirstJava",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/Mini/IdeaProjects/ProjectNumberBaseball/src/Main.java",
-    "vue.rearranger.settings.migration": "true",
-    "애플리케이션.Main.executor": "Run"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mini/IdeaProjects/FirstJava&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Mini/IdeaProjects/ProjectNumberBaseball/src/Main.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;애플리케이션.Main.executor&quot;: &quot;Run&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -97,7 +99,8 @@
       <updated>1729490554030</updated>
       <workItem from="1729490555051" duration="9721000" />
       <workItem from="1729556863460" duration="26107000" />
-      <workItem from="1729644389442" duration="13659000" />
+      <workItem from="1729644389442" duration="18079000" />
+      <workItem from="1729733854339" duration="8977000" />
     </task>
     <task id="LOCAL-00001" summary="숫자야구 기본 로직 구현(게임 실행)">
       <option name="closed" value="true" />
@@ -131,7 +134,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729669084618</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="난이도 설정 추가&#10;BaseballGame : 정답여부 구문 변경 (3 -&gt; difficulty)&#10;BaseballGameDisplay : 0번째 메뉴(난이도 설정) 추가 및 switch문 변경">
+      <option name="closed" value="true" />
+      <created>1729671630256</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1729671630256</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,6 +155,7 @@
     <MESSAGE value="BaseballGame 클래스 수정 :&#10;입력 받을 수 있는 값에서 0을 제외함.&#10;입력값에서 중복된 숫자 입력 시 오류 메시지 출력" />
     <MESSAGE value="GameRecord 클래스 구현 및 기타 클래스 수정&#10;BaseballGame : 주석 추가 및 validateInput 메서드 수정&#10;Main : 반복문 추가&#10;BaseballGameDisplay : 종료여부 boolean값 추가 및 메뉴 선택 로직 추가" />
     <MESSAGE value="클래스 수정 및 주석 추가&#10;BaseballGame : countBall 로직 수정&#10;BaseballGameDisplay : 닉네임 설정 추가, 신규 유저 점수 기록 및 순위 조정 기능 추가&#10;GameRecord : 순위 출력에 필요한 변수 추가, 순위 조정 메서드 추가, clearRecord 메서드 기능 추가(순위 초기화), 순위 출력 로직 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="클래스 수정 및 주석 추가&#10;BaseballGame : countBall 로직 수정&#10;BaseballGameDisplay : 닉네임 설정 추가, 신규 유저 점수 기록 및 순위 조정 기능 추가&#10;GameRecord : 순위 출력에 필요한 변수 추가, 순위 조정 메서드 추가, clearRecord 메서드 기능 추가(순위 초기화), 순위 출력 로직 추가" />
+    <MESSAGE value="난이도 설정 추가&#10;BaseballGame : 정답여부 구문 변경 (3 -&gt; difficulty)&#10;BaseballGameDisplay : 0번째 메뉴(난이도 설정) 추가 및 switch문 변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="난이도 설정 추가&#10;BaseballGame : 정답여부 구문 변경 (3 -&gt; difficulty)&#10;BaseballGameDisplay : 0번째 메뉴(난이도 설정) 추가 및 switch문 변경" />
   </component>
 </project>

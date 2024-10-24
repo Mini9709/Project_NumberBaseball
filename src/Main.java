@@ -3,10 +3,10 @@ public class Main {
 
         BaseballGameDisplay display = new BaseballGameDisplay();
 
-        while(!display.getExit()){
+        while(!display.getExit()) {
             try {
                 display.start();
-            } catch (Exception e){
+            } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }

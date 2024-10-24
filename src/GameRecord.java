@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class GameRecord {
-    private static Map<String, Integer> recordList = new LinkedHashMap<>();
     private boolean exitMenu = false;
     private static int firstScore = 99999;
     private static int secondScore = 99999;
@@ -10,6 +9,7 @@ public class GameRecord {
     private static String secondPlayer = "";
     private static String thirdPlayer = "";
 
+    private static Map<String, Integer> recordList = new LinkedHashMap<>();
     Scanner sc = new Scanner(System.in);
 
     public static void setRecord(int score, String nickname){
@@ -25,7 +25,7 @@ public class GameRecord {
         System.out.println("< 게임 기록 보기 >");
         Iterator<String> iterator = recordList.keySet().iterator();
 
-        for (int i = 0; i < recordList.size(); i++){
+        for (int i = 0; i < recordList.size(); i++) {
             String key = iterator.next();
             System.out.println(i+1 + "번째 게임 : " + key + " 의 점수 - " + recordList.get(key));
         }
@@ -39,20 +39,20 @@ public class GameRecord {
             switch (choice) {
                 // 1 : 순위 출력
                 case "1" -> {
-                    if (recordList.isEmpty()){
+                    if (recordList.isEmpty()) {
                         System.out.println("정보가 없습니다.");
                     } else {
-                        if (firstPlayer.isEmpty() ){
+                        if (firstPlayer.isEmpty() ) {
                             System.out.println("1등 : 없음");
                         } else {
-                            System.out.println("1등 : " + firstPlayer + " - " + firstScore);
+                            System.out.println("1등 : " + firstPlayer + " 의 점수 - " + firstScore);
                         }
-                        if (secondPlayer.isEmpty() ){
+                        if (secondPlayer.isEmpty() ) {
                             System.out.println("2등 : 없음");
                         } else {
-                            System.out.println("2등 : " + secondPlayer + " - " + secondScore);
+                            System.out.println("2등 : " + secondPlayer + " 의 점수 - " + secondScore);
                         }
-                        if (thirdPlayer.isEmpty() ){
+                        if (thirdPlayer.isEmpty() ) {
                             System.out.println("3등 : 없음");
                         } else {
                             System.out.println("3등 : " + thirdPlayer + " 의 점수 - " + thirdScore);
@@ -70,7 +70,7 @@ public class GameRecord {
     }
 
     // 신규 유저의 기록을 받아 순위 조정
-    public static void recordRank(int score, String nickname){
+    public static void recordRank(int score, String nickname) {
         if (score < thirdScore) {
             if (score < secondScore) {
                 thirdScore = secondScore;
@@ -92,7 +92,7 @@ public class GameRecord {
     }
 
     // 플레이 기록 및 순위 초기화
-    public void clearRecord(){
+    public void clearRecord() {
         recordList.clear();
         firstScore = secondScore = thirdScore = 99999;
         firstPlayer = secondPlayer = thirdPlayer = "";
